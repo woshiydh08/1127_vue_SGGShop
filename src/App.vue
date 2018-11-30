@@ -7,12 +7,15 @@
 
 <script>
   import FooterGuide from './components/FooterGuide/FooterGuide'
-  import {reqAddress} from '../src/api/index'
 export default {
   name: 'App',
   components: {
     FooterGuide
   },
+  mounted(){
+    this.$store.dispatch('getAddress');
+    this.$store.dispatch('getUser')
+  }
 }
 </script>
 
